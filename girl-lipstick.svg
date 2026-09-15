@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620">
+<defs>
+ <radialGradient id="skin" cx="45%" cy="35%"><stop offset="0" stop-color="#ffe9df"/><stop offset=".7" stop-color="#f7c5b5"/><stop offset="1" stop-color="#d9907f"/></radialGradient>
+ <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2b1820"/><stop offset=".45" stop-color="#6b3845"/><stop offset="1" stop-color="#1a1116"/></linearGradient>
+ <linearGradient id="dress" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0f1"/><stop offset="1" stop-color="#d9879c"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0bd"/><stop offset=".5" stop-color="#c98e45"/><stop offset="1" stop-color="#fff0bd"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#7c3e4a" flood-opacity=".25"/></filter>
+</defs>
+<ellipse cx="285" cy="575" rx="175" ry="28" fill="#8b4653" opacity=".16"/>
+<path d="M82 585 Q120 390 265 390 Q410 390 474 585Z" fill="url(#dress)" filter="url(#shadow)"/>
+<path d="M104 235 Q76 70 240 45 Q402 20 426 188 Q445 330 315 405 Q166 390 104 235Z" fill="url(#hair)"/>
+<path d="M172 145 Q188 86 278 88 Q368 91 383 182 L360 310 Q335 375 270 390 Q204 380 171 314Z" fill="url(#skin)" filter="url(#shadow)"/>
+<path d="M175 166 Q180 102 267 86 Q345 77 385 145 Q325 126 280 148 Q227 172 175 166Z" fill="url(#hair)"/>
+<path d="M184 195 Q213 178 240 197" stroke="#4b252c" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M296 194 Q326 176 351 195" stroke="#4b252c" stroke-width="9" fill="none" stroke-linecap="round"/>
+<ellipse cx="219" cy="215" rx="13" ry="9" fill="#3a2025"/><ellipse cx="326" cy="214" rx="13" ry="9" fill="#3a2025"/>
+<path d="M270 218 Q256 260 270 273 Q282 279 293 268" stroke="#bd796d" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M243 298 Q271 278 303 300 Q274 326 243 298Z" fill="#c74e69"/>
+<path d="M241 299 Q272 309 304 300" stroke="#8e2d47" stroke-width="4" fill="none"/>
+<path d="M356 320 Q409 339 421 410 Q425 447 393 463 Q366 470 345 438 L317 386Z" fill="url(#skin)"/>
+<path d="M377 351 Q430 320 466 285 Q480 272 491 286 Q499 298 486 313 L407 391Z" fill="url(#skin)"/>
+<g transform="translate(431 275) rotate(-32)" filter="url(#shadow)">
+ <rect x="-11" y="0" width="22" height="92" rx="7" fill="#1c1517"/>
+ <rect x="-13" y="-9" width="26" height="17" rx="4" fill="url(#gold)"/>
+ <path d="M-10 -48 L10 -48 L10 -5 L-10 -5Z" fill="#b53c57"/>
+ <path d="M-10 -48 Q0 -66 10 -48Z" fill="#d95d75"/>
+</g>
+<circle cx="382" cy="132" r="9" fill="#f0b34e"/><path d="M146 225 Q128 282 156 330" stroke="#9d5c68" stroke-width="7" fill="none" opacity=".45"/>
+</svg>
