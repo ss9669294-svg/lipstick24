@@ -23,7 +23,7 @@
 <form class="order-form" onsubmit="submitOrder(event)"><h2>Place Your Order</h2><p>Fill in your details and choose your favorite shade.</p><label>Full Name *<input required name="name" type="text" placeholder="Your full name"></label><label>Email Address *<input required name="email" type="email" placeholder="you@example.com"></label><label>City *<input required name="city" type="text" placeholder="Your city"></label><label>Contact No. *<input required name="phone" type="tel" pattern="[0-9 +()-]{10,}" placeholder="Your contact number"></label><label>Choose Shade *<select required name="shade"><option value="">Select a shade</option><option>Ruby Red</option><option>Wine Berry</option><option>Pink Bloom</option><option>Soft Pink</option></select></label><button class="button" type="submit">Submit Order →</button><small>We'll save your order and notify you after submission.</small><p id="orderStatus" aria-live="polite"></p></form></section>
 </main><footer><span>Lipstick 24 ♡</span><span>Beauty in Every Shade</span></footer>
 <script>
-const ORDER_ENDPOINT='https://script.google.com/macros/s/AKfycbzXuNRxSRccxml9NpYwGvBcRPKvoQTHlyTtZVV86eSpRP8fEzLtcwUMJwBgBQrUHlOt/exec';
+const ORDER_ENDPOINT='https://script.google.com/macros/s/AKfycbx1XcIw6DjJVAWKMjpvdQ3QmIzxBct22IMiuNYu0_8nt2y50tWqWazRQ2n6uFvHIgau/exec';
 async function submitOrder(e){
   e.preventDefault();
   const form=e.target;
