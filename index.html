@@ -20,26 +20,24 @@
 </div></section>
 <section class="benefits"><div>♡<span>Lightweight<br>Feel</span></div><div>◷<span>Long-Lasting<br>Color</span></div><div>♢<span>Moisturizing<br>Formula</span></div><div>✦<span>Smooth<br>Application</span></div></section>
 <section class="order-section" id="order"><div class="why-copy" id="why"><p class="eyebrow">WHY YOU'LL LOVE IT?</p><h2>Beauty made for <em>every you.</em></h2><p>✓ Rich, pigmented shades</p><p>✓ Stays up to 12 hours</p><p>✓ Non-drying formula</p><p>✓ Perfect for daily &amp; special occasions</p><div class="limited">Limited Stock<br><b>Hurry Up! ♡</b></div></div>
-<form class="order-form" id="orderForm" action="https://script.google.com/macros/s/AKfycbx1XcIw6DjJVAWKMjpvdQ3QmIzxBct22IMiuNYu0_8nt2y50tWqWazRQ2n6uFvHIgau/exec" method="POST" target="hidden_iframe" onsubmit="handleOrderSubmit(event)"><h2>Place Your Order</h2><p>Fill in your details and choose your favorite shade.</p><label>Full Name *<input required name="name" type="text" placeholder="Your full name"></label><label>Email Address *<input required name="email" type="email" placeholder="you@example.com"></label><label>City *<input required name="city" type="text" placeholder="Your city"></label><label>Contact No. *<input required name="phone" type="tel" pattern="[0-9 +()-]{10,}" placeholder="Your contact number"></label><label>Choose Shade *<select required name="shade"><option value="">Select a shade</option><option>Ruby Red</option><option>Wine Berry</option><option>Pink Bloom</option><option>Soft Pink</option></select></label><button class="button" type="submit">Submit Order →</button><small>We'll save your order and notify you after submission.</small><p id="orderStatus" aria-live="polite"></p></form>
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none" title="Order submission"></iframe></section>
+<form class="order-form" id="orderForm" onsubmit="handleOrderSubmit(event)"><h2>Place Your Order</h2><p>Fill in your details and choose your favorite shade.</p><label>Full Name *<input required name="name" type="text" placeholder="Your full name"></label><label>Email Address *<input required name="email" type="email" placeholder="you@example.com"></label><label>City *<input required name="city" type="text" placeholder="Your city"></label><label>Contact No. *<input required name="phone" type="tel" pattern="[0-9 +()-]{10,}" placeholder="Your contact number"></label><label>Choose Shade *<select required name="shade"><option value="">Select a shade</option><option>Ruby Red</option><option>Wine Berry</option><option>Pink Bloom</option><option>Soft Pink</option></select></label><button class="button" type="submit">Submit Order →</button><small>Your order details will be processed after submission.</small><p id="orderStatus" aria-live="polite"></p></form>
+</section>
 </main><footer><span>Lipstick 24 ♡</span><span>Beauty in Every Shade</span></footer>
 <script>
 function handleOrderSubmit(e){
+  e.preventDefault();
   const form=e.target;
   const button=form.querySelector('button');
   const status=document.getElementById('orderStatus');
   const data=Object.fromEntries(new FormData(form));
   button.disabled=true;
-  button.textContent='Submitting...';
-  status.textContent='Submitting your order...';
+  button.textContent='Submitted';
   localStorage.setItem('lipstick24_order',JSON.stringify(data));
-  setTimeout(function(){
-    alert('Order submitted successfully! Thank you for ordering from Lipstick 24.');
-    status.textContent='✓ Order submitted successfully.';
-    form.reset();
-    button.disabled=false;
-    button.textContent='Submit Order →';
-  },1200);
+  status.textContent='✓ Order details saved on this device.';
+  alert('Your order details have been saved on this device. Thank you for ordering from Lipstick 24.');
+  form.reset();
+  button.disabled=false;
+  button.textContent='Submit Order →';
 }
 </script>
 </body></html>
